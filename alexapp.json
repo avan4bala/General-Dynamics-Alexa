@@ -1,0 +1,522 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ccs account",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help me with the commands",
+                        "help me with these alexa",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "bye",
+                        "thank you bye",
+                        "see you later",
+                        "exit",
+                        "im done",
+                        "im good"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "InventoryIntent",
+                    "slots": [
+                        {
+                            "name": "service",
+                            "type": "AWS_SERVICE"
+                        },
+                        {
+                            "name": "cost",
+                            "type": "Amount_Type"
+                        },
+                        {
+                            "name": "account",
+                            "type": "Account_Phrase"
+                        }
+                    ],
+                    "samples": [
+                        "{service} {cost}",
+                        "{cost} of {account}",
+                        "{cost} of {service}",
+                        "{service}"
+                    ]
+                },
+                {
+                    "name": "PredictYearlyCostsIntent",
+                    "slots": [
+                        {
+                            "name": "startDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "endDate",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "prediction year",
+                        "prediction yearly",
+                        "prediction yearly costs",
+                        "predict yearly costs",
+                        "prediction {startDate} {endDate}",
+                        "predict from {startDate}  {endDate}",
+                        "estimate",
+                        "prediction {startDate}  {endDate}",
+                        "prediction",
+                        "predict {startDate}  {endDate}",
+                        "predict from {startDate} to {endDate}",
+                        "prediction from {startDate} to {endDate}",
+                        "predict yearly",
+                        "predict year",
+                        "how much will i spent from {startDate} to {endDate}",
+                        "prediction {startDate} to {endDate}",
+                        "how much will i spend from {startDate} to {endDate}",
+                        "whats the damage"
+                    ]
+                },
+                {
+                    "name": "GetCostsFromRangeIntent",
+                    "slots": [
+                        {
+                            "name": "startDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "endDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "metrics",
+                            "type": "Cost_Metric"
+                        },
+                        {
+                            "name": "granularity",
+                            "type": "Cost_Granularity"
+                        },
+                        {
+                            "name": "targetDate",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "how much did we spend this year",
+                        "give me the costs",
+                        "yearly costs",
+                        "cost on {targetDate} {metrics} {granularity}",
+                        "cost on {targetDate} using {metrics} with {granularity}",
+                        "costs on {targetDate} using {metrics} with {granularity}",
+                        "costs on  {targetDate} using {metrics}",
+                        "cost on {targetDate} using {metrics}",
+                        "cost on {targetDate}",
+                        "costs on {targetDate}",
+                        "costs {startDate} {endDate} {granularity} {metrics}",
+                        "costs {startDate} {endDate} {metrics} {granularity}",
+                        "costs {startDate} {endDate} {metrics}",
+                        "cost {startDate} {endDate}",
+                        "costs {startDate} {endDate}",
+                        "cost using {granularity} with {metrics}",
+                        "cost using {granularity}",
+                        "cost {granularity}",
+                        "cost from {startDate} to {endDate} with {granularity}",
+                        "cost from {startDate} to {endDate} using {metrics}",
+                        "cost from {startDate} to {endDate} using {metrics} with {granularity}",
+                        "cost from {startDate}  to {endDate}",
+                        "cost with {metrics}",
+                        "cost using {metrics}",
+                        "cost {metrics}",
+                        "cost using {metrics} with {granularity}",
+                        "costs using {metrics} with {granularity}",
+                        "costs using {metrics} {granularity}",
+                        "costs {metrics}",
+                        "costs using {metrics}",
+                        "costs using {granularity}",
+                        "costs {granularity} {metrics}",
+                        "costs using {metrics} from {startDate} to {endDate} ",
+                        "costs using {metrics} from {startDate} to {endDate} with {granularity}",
+                        "costs {metrics} {granularity}",
+                        "{startDate} to {endDate} {metrics} using {granularity}",
+                        "costs {granularity}",
+                        "costs using {granularity} {metrics}",
+                        "costs from {startDate} to {endDate} {granularity} using {metrics}",
+                        "costs from {startDate} to {endDate} {granularity}",
+                        "how much did I spend from {startDate} to {endDate} ",
+                        "how much did i spend from {startDate} to {startDate} using {metrics}",
+                        "costs {startDate} to {endDate}",
+                        "costs from {startDate} to {endDate} using {metrics}",
+                        "costs from {startDate} to {endDate}",
+                        "I want the money I've spent from {startDate} to {endDate}"
+                    ]
+                },
+                {
+                    "name": "MetricsHelperIntent",
+                    "slots": [],
+                    "samples": [
+                        "whats metrics",
+                        "what kind of metrics",
+                        "what are the metrics",
+                        "metrics help",
+                        "help with metrics",
+                        "type metrics",
+                        "list metrics",
+                        "list me the metrics",
+                        "types of metrics",
+                        "what metrics",
+                        "what kind of metrics are there"
+                    ]
+                },
+                {
+                    "name": "PredictYearlyCostsHelperIntent",
+                    "slots": [],
+                    "samples": [
+                        "prediction commands",
+                        "predict commands",
+                        "please help prediction",
+                        "help prediction",
+                        "prediction help",
+                        "predict help"
+                    ]
+                },
+                {
+                    "name": "GeneralHelperIntent",
+                    "slots": [],
+                    "samples": [
+                        "helper commands",
+                        "what are some example commands",
+                        "example commands"
+                    ]
+                },
+                {
+                    "name": "EasterEggIntent",
+                    "slots": [],
+                    "samples": [
+                        "project cerulean"
+                    ]
+                },
+                {
+                    "name": "CostsFromSpecificDayHelpIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "CurrentMonthlyTotalIntent",
+                    "slots": [],
+                    "samples": [
+                        "monthly total",
+                        "current monthly total"
+                    ]
+                },
+                {
+                    "name": "AverageMonthlyCostIntent",
+                    "slots": [],
+                    "samples": [
+                        "average monthly cost"
+                    ]
+                },
+                {
+                    "name": "EmailReportIntent",
+                    "slots": [
+                        {
+                            "name": "emailAddress",
+                            "type": "emails"
+                        }
+                    ],
+                    "samples": [
+                        "email me at {emailAddress}",
+                        "email the report",
+                        "email me the report",
+                        "email report"
+                    ]
+                },
+                {
+                    "name": "CancelEmailReportIntent",
+                    "slots": [],
+                    "samples": [
+                        "cancel summary report email",
+                        "cancel report email",
+                        "cancel it",
+                        "cancel report",
+                        "cancel the email report",
+                        "cancel email report"
+                    ]
+                },
+                {
+                    "name": "costInfo",
+                    "slots": [],
+                    "samples": [
+                        "ok tell me about costs",
+                        "what can u tell me about the cost service",
+                        "tell me about costs",
+                        "tell me about the cost service"
+                    ]
+                },
+                {
+                    "name": "inventoryInfo",
+                    "slots": [],
+                    "samples": [
+                        "ok tell me about inventory",
+                        "what can you tell me about the inventory service",
+                        "tell me about inventory",
+                        "tell me about the inventory service"
+                    ]
+                },
+                {
+                    "name": "errorSay",
+                    "slots": [],
+                    "samples": [
+                        "can i know anything else",
+                        "what else can this service do",
+                        "can you tell me anything else",
+                        "anything else besides inventory and costs",
+                        "anything else",
+                        "what else can you tell me"
+                    ]
+                },
+                {
+                    "name": "exceptionDraft",
+                    "slots": [],
+                    "samples": [
+                        "what else besides cost and inventory",
+                        "is there anything else",
+                        "what else",
+                        "is there anything else you can tell me"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "AWS_SERVICE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "reserved instance expiration",
+                                "synonyms": [
+                                    "reserved instances expiration date",
+                                    "reserved instances expiration"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "reserved instance",
+                                "synonyms": [
+                                    "ri"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ec two",
+                                "synonyms": [
+                                    "ec 2 instances"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "subnet",
+                                "synonyms": [
+                                    "subnets"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "security group",
+                                "synonyms": [
+                                    "sgs",
+                                    "security groups"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "volume",
+                                "synonyms": [
+                                    "volumes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "route",
+                                "synonyms": [
+                                    "route tables",
+                                    "routes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "snapshot",
+                                "synonyms": [
+                                    "snapshots"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vpc",
+                                "synonyms": [
+                                    "vpcs"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Cost_Metric",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "usage quantity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "unblended cost"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "normalized usage amount"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "amortized cost"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "blended cost"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "net amortized cost"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "net unblended cost"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Cost_Granularity",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "daily"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "monthly"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Account_Phrase",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "id",
+                                "synonyms": [
+                                    "my id"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "account",
+                                "synonyms": [
+                                    "my account",
+                                    "the account"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Amount_Type",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "extent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "flock"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "quantity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "supply"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "amount"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "load"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "measure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "number"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "emails",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "@gdit.com"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
