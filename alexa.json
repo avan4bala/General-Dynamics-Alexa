@@ -1,0 +1,71 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "programdetail",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what can i say",
+                        "what can i do"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "costInfo",
+                    "slots": [],
+                    "samples": [
+                        "ok tell me about costs",
+                        "what can u tell me about the cost service",
+                        "tell me about costs",
+                        "tell me about the cost service"
+                    ]
+                },
+                {
+                    "name": "inventoryInfo",
+                    "slots": [],
+                    "samples": [
+                        "ok tell me about inventory",
+                        "what can you tell me about the inventory service",
+                        "tell me about inventory",
+                        "tell me about the inventory service"
+                    ]
+                },
+                {
+                    "name": "errorSay",
+                    "slots": [],
+                    "samples": [
+                        "can i know anything else",
+                        "what else can this service do",
+                        "can you tell me anything else",
+                        "anything else besides inventory and costs",
+                        "anything else",
+                        "what else can you tell me"
+                    ]
+                },
+                {
+                    "name": "exceptionDraft",
+                    "slots": [],
+                    "samples": [
+                        "what else besides cost and inventory",
+                        "is there anything else",
+                        "what else",
+                        "is there anything else you can tell me"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
