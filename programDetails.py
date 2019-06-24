@@ -6,7 +6,6 @@ from ask_sdk_core.utils import is_request_type, is_intent_name
 from ask_sdk_core.handler_input import HandlerInput
 from ask_sdk_core.dispatch_components import AbstractExceptionHandler, AbstractRequestHandler
 
-
 class InventoryInfoHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):  # type: (HandlerInput) -> bool
         return is_intent_name("inventoryInfo")(handler_input)
@@ -29,8 +28,6 @@ class CostInfoHandler(AbstractRequestHandler):
 
         return handler_input.response_builder.response
 
-
-
 class ErrorCheck(AbstractRequestHandler):
     def can_handle(self, handler_input):  # type: (HandlerInput) -> bool
         return is_intent_name("errorSay")(handler_input)
@@ -42,8 +39,6 @@ class ErrorCheck(AbstractRequestHandler):
 
         return handler_input.response_builder.response
 
-
-
 class ExceptionDraftHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):  # type: (HandlerInput) -> bool
         return is_intent_name("exceptionDraft")(handler_input)
@@ -54,5 +49,3 @@ class ExceptionDraftHandler(AbstractRequestHandler):
         handler_input.response_builder.speak(instructions).set_should_end_session(False)
 
         return handler_input.response_builder.response
-
-
